@@ -150,3 +150,21 @@ func main() {
 }
 ```
 
+## Install
+```shell
+go get github.com/wang14597/customizeLogger
+```
+
+```go
+package main
+
+import "github.com/wang14597/customizeLogger/log"
+
+func main() {
+	logger := log.CustomizeLogger{}
+	logger.Init()
+	logger.Info("info...")
+}
+```
+
+![img.png](doc/img.png)
