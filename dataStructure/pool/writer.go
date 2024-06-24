@@ -1,8 +1,8 @@
 package pool
 
 import (
-	m "github.com/clog/dataStructure/map"
 	"github.com/sirupsen/logrus"
+	m "github.com/wang14597/customizeLogger/dataStructure/map"
 	"os"
 	"sync"
 	"time"

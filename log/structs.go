@@ -1,8 +1,8 @@
 package log
 
 import (
-	p "github.com/clog/dataStructure/pool"
 	"github.com/sirupsen/logrus"
+	p "github.com/wang14597/customizeLogger/dataStructure/pool"
 	"sync"
 )
 

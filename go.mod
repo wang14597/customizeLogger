@@ -1,4 +1,4 @@
-module github.com/clog
+module github.com/wang14597/customizeLogger
 
 go 1.18
 

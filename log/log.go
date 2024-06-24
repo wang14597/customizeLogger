@@ -2,9 +2,9 @@ package log
 
 import (
 	"fmt"
-	m "github.com/clog/dataStructure/map"
-	p "github.com/clog/dataStructure/pool"
 	"github.com/sirupsen/logrus"
+	m "github.com/wang14597/customizeLogger/dataStructure/map"
+	p "github.com/wang14597/customizeLogger/dataStructure/pool"
 	"os"
 	"strings"
 	"time"

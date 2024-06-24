@@ -1,6 +1,6 @@
 package main
 
-import "github.com/clog/log"
+import "github.com/wang14597/customizeLogger/log"
 
 func main() {
 	customizeLogger := log.CustomizeLogger{}
