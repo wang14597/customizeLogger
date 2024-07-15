@@ -2,6 +2,7 @@ package log
 
 import (
 	"fmt"
+	"github.com/robfig/cron"
 	"github.com/sirupsen/logrus"
 	m "github.com/wang14597/customizeLogger/dataStructure/map"
 	p "github.com/wang14597/customizeLogger/dataStructure/pool"
@@ -36,6 +37,17 @@ func (c *CustomizeLogger) Init() {
 		go c.startAsyncLogWriterNew(hook)
 		c.ServiceHookNew = hook
 		l.AddHook(hook)
+
+		job := cron.New()
+		err := job.AddFunc("*/1 * * * *", func() {
+			c.ServiceHookNew.WriterPool.CleanExpiredWriter()
+		})
+		if err != nil {
+			fmt.Println("Error adding cron job:", err)
+			return
+		}
+		job.Start()
+
 	}
 
 	c.defaultLogger = l
